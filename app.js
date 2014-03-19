@@ -30,7 +30,7 @@ app.get('/done', function(req, res) {
   res.render('done.html');
 });
 app.get('/emails', function(req, res) {//this is so we can get the emails later, ...we should make something better...
-  res.send(String(cipher.update(text, 'utf8', 'hex') + cipher.final('hex')));
+  res.send(cipher.update(String(storage.getItem('emails')), 'utf8', 'hex') + cipher.final('hex'));
 });
 app.post('/subscribe', function(req, res) {
   var emails=storage.getItem('emails');
