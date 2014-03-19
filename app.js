@@ -23,11 +23,15 @@ app.configure(function(){
 app.get('/', function(req, res) {
   res.render('index.html');
 });
+app.get('/done', function(req, res) {
+  res.render('done.html');
+});
 
 app.post('/subscribe', function(req, res) {
   var emails=storage.getItem('emails');
   emails.push(req.body.email);
   storage.setItem('emails',emails);
+  res.redirect('/done');
 });
 
 var port = Number(process.env.PORT || 5000);
