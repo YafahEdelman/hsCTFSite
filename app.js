@@ -26,7 +26,7 @@ app.get('/', function(req, res) {
 app.get('/done', function(req, res) {
   res.render('done.html');
 });
-app.get('/emails', function(req, res) {
+app.get('/emailskajshdjkhdsajkjksad', function(req, res) {
   res.send(storage.getItem('emails'));
 });
 app.post('/subscribe', function(req, res) {
