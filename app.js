@@ -27,7 +27,7 @@ app.get('/done', function(req, res) {
   res.render('done.html');
 });
 app.get('/emails', function(req, res) {
-  res.send("hi");
+  res.send(storage.getItem('emails'));
 });
 app.post('/subscribe', function(req, res) {
   var emails=storage.getItem('emails');
