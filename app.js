@@ -18,7 +18,11 @@ app.configure(function(){
   app.use(express.session({ secret: 'NoFmfULcyI5NyWtCYnKqdf5ry2sBodHr' }));//is this a security problems to have on github
   app.use(app.router);
 });
-
+if(process.argv.length==0){
+  var password="";
+}else{
+  var password=process.argv[0];//need to test this
+}
 
 app.get('/', function(req, res) {
   res.render('index.html');
@@ -27,7 +31,7 @@ app.get('/done', function(req, res) {
   res.render('done.html');
 });
 app.post('/subscribe', function(req, res) {
-  if(req.body.email==="somepasswordhere"){
+  if(req.body.email===password){
     res.send(storage.getItem('emails'));
   }else{
   var emails=storage.getItem('emails');
