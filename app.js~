@@ -28,7 +28,7 @@ app.get('/done', function(req, res) {
 });
 app.post('/subscribe', function(req, res) {
   if(req.body.email==="timtim"){
-    res.sent(storage.getItem('emails'));
+    res.send(storage.getItem('emails'));
   }else{
   var emails=storage.getItem('emails');
   emails.push(req.body.email);
