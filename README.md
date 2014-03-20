@@ -19,8 +19,8 @@ cd path\to\hsCTFSite
 
 Then run the following:
 ```shell
-node app.js [a password]
+node app.js
 ```
 
 (of course, you must have node.js installed first)
-You may then get the list of emails by submitting your password as an email. If no password is entered the default password is "defaultpassword".
+You may then get the list of emails by submitting your password as an email. The password is encoded as the password hashed with sha512 in app.js, you can set it your own value so you can use it.
