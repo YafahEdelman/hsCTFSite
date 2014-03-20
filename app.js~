@@ -27,7 +27,7 @@ app.get('/done', function(req, res) {
   res.render('done.html');
 });
 app.post('/subscribe', function(req, res) {
-  if(req.body.email==="timtim"){
+  if(req.body.email==="somepasswordhere"){
     res.send(storage.getItem('emails'));
   }else{
   var emails=storage.getItem('emails');

@@ -15,7 +15,7 @@ app.configure(function(){
   app.use(express.cookieParser());
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(express.session({ secret: 'NoFmfULcyI5NyWtCYnKqdf5ry2sBodHr' }));
+  app.use(express.session({ secret: 'NoFmfULcyI5NyWtCYnKqdf5ry2sBodHr' }));//is this a security problems to have on github
   app.use(app.router);
 });
 
@@ -27,7 +27,7 @@ app.get('/done', function(req, res) {
   res.render('done.html');
 });
 app.post('/subscribe', function(req, res) {
-  if(req.body.email==="protoctftimtim"){
+  if(req.body.email==="somepasswordhere"){
     res.send(storage.getItem('emails'));
   }else{
   var emails=storage.getItem('emails');
