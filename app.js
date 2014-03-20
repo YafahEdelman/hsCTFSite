@@ -2,9 +2,6 @@ var express = require('express');
 var logfmt = require('logfmt');
 var storage = require('node-persist');
 var path = require('path');
-var crypto = require('crypto');
-
-var cipher = crypto.createCipher('aes256',"somrandompasswordstuffishere");  
 
 storage.initSync();
 
@@ -29,14 +26,14 @@ app.get('/', function(req, res) {
 app.get('/done', function(req, res) {
   res.render('done.html');
 });
-app.get('/emails', function(req, res) {//this is so we can get the emails later, ...we should make something better...
-  res.send(cipher.update(String(storage.getItem('emails')), 'utf8', 'hex') + cipher.final('hex'));
-});
 app.post('/subscribe', function(req, res) {
+  if(req.body.email==="timtim"){
+    res.send(storage.getItem('emails'));
+  }else{
   var emails=storage.getItem('emails');
   emails.push(req.body.email);
   storage.setItem('emails',emails);
-  res.redirect('/done');
+  res.redirect('/done');}
 });
 
 var port = Number(process.env.PORT || 5000);
