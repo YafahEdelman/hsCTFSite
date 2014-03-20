@@ -4,14 +4,12 @@ var storage = require('node-persist');
 var path = require('path');
 var crypto = require('crypto');
 
-
-
 storage.initSync();
 
 var app = express();
 
 app.configure(function(){
-  app.set('views',  __dirname +'/views');//this may not work
+  app.set('views',  __dirname +'/views');
   app.engine('html', require('ejs').renderFile);
   app.use(express.static(path.join(__dirname, 'public')));
   app.use(logfmt.requestLogger());//is this really needed?
