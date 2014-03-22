@@ -28,9 +28,15 @@ var passwordHash= "aa2689cb7a41942f74fe6bafe7c0f00aaf259df87722ec9b106402fdccee2
 app.get('/', function(req, res) {
   res.render('index.html');
 });
+
+app.get('/about', function(req, res) {
+  res.render('about.html');
+});
+
 app.get('/done', function(req, res) {
   res.render('done.html');
 });
+
 app.post('/subscribe', function(req, res) {//make it so it only does the checking when no @ in it or something
   var shasum = crypto.createHash('sha512');
   shasum.update(req.body.email);
@@ -43,7 +49,8 @@ app.post('/subscribe', function(req, res) {//make it so it only does the checkin
   res.redirect('/done');}
 });
 
-var port = Number(process.env.PORT || 5000);
+var port = Number(process.env.PORT || 3000);
+
 app.listen(port, function() {
   console.log('Listening on ' + port);
 });
