@@ -42,7 +42,15 @@ body{
 #footer {
   position: absolute;
   bottom: 0;
+  left:100px;
 }
+
+@media screen and (max-width: 750px){
+  #footer {
+    left: 10px;
+  }
+}
+
 
 .panel {
   height: 300px;
