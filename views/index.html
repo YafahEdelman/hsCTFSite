@@ -1,28 +1,36 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]> <html class="lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>High School CTF</title>
-  <link rel="stylesheet" href="css/style.css">
-  <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-</head>
-<body>
-  <img class="logo" src="images/hsctf-logo.png" alt="HSCTF Logo">
-<form class="form-wrapper cf" method="post" action="/subscribe">
-	<input type="text" placeholder="coder@example.com" name="email" required>
-	<button type="submit">Get email updates!</button>
-</form>
-
-
-
-  <div class="about">
-    <p class="about-author">
-      &copy; 2014 West Windsor-Plainsboro HS North CS Club
-    </p>
-  </div>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>High School CTF</title>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <img src="images/hsctf-logo.png" alt="HSCTF" class="img-responsive" id="logo">
+      </div>
+      <div class="row">
+        <form method="post" action="/subscribe" class="form-subscribe">
+	        <input class="form-control" placeholder="coder@example.com" name="email" required>
+	        <button class="btn btn-lg btn-primary btn-block" type="submit">Subscribe to Email Updates!</button>
+        </form>
+      </div>
+      <div class="row">
+		    <a class="btn btn-primary btn-info" id ="nav" role="button" href="/about"> About » </a>
+      </div>
+      <div id="footer">
+        <p> &copy; West Windsor-Plainsboro HS North CS Club </p>
+      </div>
+    </div>
+  </body>
 </html>
