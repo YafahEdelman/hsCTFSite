@@ -5,6 +5,7 @@ html {
 
 body{
   background-color: rgb(89, 103, 120);
+  background: url("../images/binary.png") repeat;
   padding-top: 20px;
   color: rgb(255, 255, 255);
   text-align: center;
