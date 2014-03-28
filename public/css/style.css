@@ -39,6 +39,10 @@ body{
    font-size: 17.5px;
 }
 
+#nav {
+  margin-bottom: 6px;
+}
+
 #footer {
   position: absolute;
   bottom: 0;
