@@ -10,6 +10,11 @@
     "logfmt": "*",
     "node-persist": "*",
     "path": "*",
-    "ejs": "*"
+    "ejs": "*",
+    "dogescript": "^2.3.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-dogescript": "^0.4.0"
   }
 }

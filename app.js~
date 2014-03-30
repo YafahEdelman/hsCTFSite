@@ -4,14 +4,12 @@ var storage = require('node-persist');
 var path = require('path');
 var crypto = require('crypto');
 
-
-
 storage.initSync();
 
 var app = express();
 
 app.configure(function(){
-  app.set('views',  __dirname +'/views');//this may not work
+  app.set('views',  __dirname +'/views');
   app.engine('html', require('ejs').renderFile);
   app.use(express.static(path.join(__dirname, 'public')));
   app.use(logfmt.requestLogger());//is this really needed?
@@ -28,9 +26,15 @@ var passwordHash= "aa2689cb7a41942f74fe6bafe7c0f00aaf259df87722ec9b106402fdccee2
 app.get('/', function(req, res) {
   res.render('index.html');
 });
+
+app.get('/about', function(req, res) {
+  res.render('about.html');
+});
+
 app.get('/done', function(req, res) {
   res.render('done.html');
 });
+
 app.post('/subscribe', function(req, res) {//make it so it only does the checking when no @ in it or something
   var shasum = crypto.createHash('sha512');
   shasum.update(req.body.email);
@@ -43,7 +47,77 @@ app.post('/subscribe', function(req, res) {//make it so it only does the checkin
   res.redirect('/done');}
 });
 
-var port = Number(process.env.PORT || 5000);
+var port = Number(process.env.PORT || 3000);
+
 app.listen(port, function() {
   console.log('Listening on ' + port);
 });
+/*
+quiet
+    dogescript was created by Zach Bruggeman
+    and has been improved by many contributors
+    such appreciate, much thanks, wow
+loud
+
+shh trained is needed? (use strict stuff)
+
+so express
+so logfmt
+so storage as 'node-persist'
+so path
+so crypto
+storage dose initSync
+
+very app is plz express 
+
+app dose configure with much 
+  app dose set with 'views',  __dirname +'/views'
+  app dose engines with 'html' require('ejs').renderFile
+  app dose set with express.static(path.join(__dirname, 'public'))
+  app dose use
+  app dose use with logfmt.requestLogger()
+  app dose use with express.cookieParser()
+  app dose use with express.bodyParser()
+  app dose use express.methodOverride()
+  app dose use with express.session({ secret: 'NoFmfULcyI5NyWtCYnKqdf5ry2sBodHr' })
+shhis this semicolon?
+wow& 
+
+
+app dose configure with much
+  app dose use with app.router
+wow&
+
+very passwordHash is "aa2689cb7a41942f74fe6bafe7c0f00aaf259df87722ec9b106402fdccee23206353fb833a5dea485a40fa870f506773ed9d1273697d4ddfe4edbf1eabd382ba";
+shh our default password hash
+
+app dose get with '/', much req,res
+  res dose render with 'index.html' 
+wow&
+app dose get with '/about', much req,res
+  res dose render with 'about.html'
+wow&
+app dose get with '/done', much req,res
+  res dose render with 'done.html')
+wow&
+app dose get with '/subscribe', much req,res
+  shh make it so it only does the checking when no @ in it or
+  very shasum is crypto dose createHash with 'sha512'
+  very shasum.update with req.body.email
+  rly shasum.digest('hex') is passwordHash
+    res dose send with (storage.getItem('emails'))
+  but
+    very emails is plz storage.getItem with 'emails'
+    emails dose push with req.body.email;
+    storage dose setItem with 'emails' emails
+    res dose redirect with '/done'
+  wow
+wow&
+
+very port is plz Number with process.env.PORT || 3000
+
+app dose listen with port much
+  console dose log with port
+  shh note doesn't print out anything besides the port
+wow&
+*/
