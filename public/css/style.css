@@ -25,6 +25,12 @@ body{
   text-shadow: none;
 }
 
+.problems{
+  color: rgb(51, 51, 51);
+  text-shadow: none;
+  text-align: left;
+}
+
 #logo{
   margin: 0px auto;
 }
