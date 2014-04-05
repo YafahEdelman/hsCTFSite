@@ -32,6 +32,9 @@ app.get('/', function(req, res) {
 app.get('/about', function(req, res) {
   res.render('about.html');
 });
+app.get('/samples', function(req, res) {
+  res.render('samples.html');
+});
 
 app.get('/done', function(req, res) {
   res.render('done.html');
@@ -52,5 +55,11 @@ app.post('/subscribe', function(req, res) {//make it so it only does the checkin
 var port = Number(process.env.PORT || 3000);
 
 app.listen(port, function() {
+<<<<<<< HEAD
+    console.log(port);
+    // note doesn't print out anything besides the port 
+})
+=======
   console.log('Listening on ' + port);
 });
+>>>>>>> 6301ba2a06a44355a0edf423d26db42b130a52ab
