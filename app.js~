@@ -15,6 +15,7 @@ storage.get('exists', function (err, reply) {
       storage.get('emails', function (err, reply) {
 		emails=reply;
 	   console.log(emails.toString());
+           console.log("hhhhhhhhhhhhhi");
 	});
     }else{
 	storage.set('emails',[]);
