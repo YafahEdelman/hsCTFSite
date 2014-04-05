@@ -9,13 +9,16 @@ var redisURL = url.parse(process.env.REDISCLOUD_URL);
 var storage = redis.createClient(redisURL.port, redisURL.hostname, {no_ready_check: true});
 storage.auth(redisURL.auth.split(":")[1]);
 var emails=[]
-storage.get('emails', function (err, reply) {
+storage.get('exists', function (err, reply) {
     //this will happen first time, the rest it will be the dict
-    if(reply==null){
-      console.log(emails);
+    if(reply=="yes"){
+      storage.get('emails', function (err, reply) {
+		emails=reply;
+	   console.log(emails.toString());
+	});
     }else{
-	emails=reply;
-   console.log(emails.toString());
+	storage.set('emails',[]);
+	storage.set('exists','yes');
 	}
 });
 
