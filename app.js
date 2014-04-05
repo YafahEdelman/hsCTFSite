@@ -12,7 +12,7 @@ var emails;
 storage.get('emails', function (err, reply) {
     //this will happen first time, the rest it will be the dict
     if(reply==null){
-       emails={};
+       emails=[];
     }else{
 	emails=reply;
 	}

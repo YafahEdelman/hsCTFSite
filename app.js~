@@ -11,9 +11,11 @@ storage.auth(redisURL.auth.split(":")[1]);
 var emails;
 storage.get('emails', function (err, reply) {
     //this will happen first time, the rest it will be the dict
-    if(reply
-    console.log(reply.toString()); // Will print `bar`
-    emails={};
+    if(reply==null){
+       emails={};
+    }else{
+	emails=reply;
+	}
 });
 
 
