@@ -69,7 +69,7 @@ app.post('/subscribe', function(req, res) {//make it so it only does the checkin
     res.send(emails);//will only work if on one dynamo
  
   }else{
-  emails.push(req.body.email);
+  emails.push(req.body.email.replace(/\,/g,""););
   res.redirect('/');}//only problem is no notification comes up
 });
 
