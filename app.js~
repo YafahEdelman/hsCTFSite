@@ -8,9 +8,10 @@ var url = require('url');
 var redisURL = url.parse(process.env.REDISCLOUD_URL);
 var storage = redis.createClient(redisURL.port, redisURL.hostname, {no_ready_check: true});
 storage.auth(redisURL.auth.split(":")[1]);
-
-var emails=storage.get('emails', function (err, reply) {
+var emails;
+storage.get('emails', function (err, reply) {
     //this will happen first time, the rest it will be the dict
+    if(reply
     console.log(reply.toString()); // Will print `bar`
     emails={};
 });
@@ -48,7 +49,7 @@ app.get('/samples', function(req, res) {
 app.get('/done', function(req, res) {
   res.render('done.html');
 });
-function updater(){
+function emailUpdater(){
 	storage.set('emails',emails);//just make this merge stuff a
 }
 setInterval(emailUpdater,1000);//1000 millisecond updating, okay?

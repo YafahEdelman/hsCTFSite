@@ -8,11 +8,14 @@ var url = require('url');
 var redisURL = url.parse(process.env.REDISCLOUD_URL);
 var storage = redis.createClient(redisURL.port, redisURL.hostname, {no_ready_check: true});
 storage.auth(redisURL.auth.split(":")[1]);
-
-var emails=storage.get('emails', function (err, reply) {
+var emails;
+storage.get('emails', function (err, reply) {
     //this will happen first time, the rest it will be the dict
-    console.log(reply.toString()); // Will print `bar`
-    emails={};
+    if(reply==null){
+       emails={};
+    }else{
+	emails=reply;
+	}
 });
 
 
