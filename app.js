@@ -15,11 +15,11 @@ storage.get('emails', function (err, reply) {
       console.log(emails);
     }else{
 	emails=reply;
-   console.log(emails);
+   console.log(emails.toString());
 	}
 });
 
-console.log(emails);
+console.log(emails.toString());
 console.log("HI");
 
 var app = express();
