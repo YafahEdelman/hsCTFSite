@@ -14,7 +14,7 @@ storage.get('exists', function (err, reply) {
     if(reply=="yes"){
       storage.get('emails', function (err, reply) {
 		emails=reply;
-	   console.log(emails.toString());
+	   console.log(typeof emails);
            console.log("hhhhhhhhhhhhhi");
 	});
     }else{
