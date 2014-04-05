@@ -11,7 +11,8 @@
     "node-persist": "*",
     "path": "*",
     "ejs": "*",
-    "dogescript": "^2.3.0"
+    "dogescript": "^2.3.0",
+    "redis": "^0.10.1"
   },
   "devDependencies": {
     "grunt": "^0.4.4",

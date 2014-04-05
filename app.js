@@ -1,12 +1,21 @@
 var express = require('express');
 var logfmt = require('logfmt');
-var storage = require('node-persist');
 var path = require('path');
 var crypto = require('crypto');
+var redis = require('redis');
+var url = require('url');
+
+var redisURL = url.parse(process.env.REDISCLOUD_URL);
+var storage = redis.createClient(redisURL.port, redisURL.hostname, {no_ready_check: true});
+storage.auth(redisURL.auth.split(":")[1]);
+
+var emails=storage.get('emails', function (err, reply) {
+    //this will happen first time, the rest it will be the dict
+    console.log(reply.toString()); // Will print `bar`
+    emails={};
+});
 
 
-
-storage.initSync();
 
 var app = express();
 
@@ -39,16 +48,19 @@ app.get('/samples', function(req, res) {
 app.get('/done', function(req, res) {
   res.render('done.html');
 });
+function updater(){
+	storage.set('emails',emails);//just make this merge stuff a
+}
+setInterval(emailUpdater,1000);//1000 millisecond updating, okay?
 
 app.post('/subscribe', function(req, res) {//make it so it only does the checking when no @ in it or something
   var shasum = crypto.createHash('sha512');
   shasum.update(req.body.email);
   if(shasum.digest('hex')===passwordHash){
-    res.send(storage.getItem('emails'));
+    res.send(emails);//will only work if on one dynamo
+ 
   }else{
-  var emails=storage.getItem('emails');
   emails.push(req.body.email);
-  storage.setItem('emails',emails);
   res.redirect('/done');}
 });
 
