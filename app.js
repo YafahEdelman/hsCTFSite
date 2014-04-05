@@ -13,12 +13,15 @@ storage.get('emails', function (err, reply) {
     //this will happen first time, the rest it will be the dict
     if(reply==null){
        emails=[];
+      console.log(emails);
     }else{
 	emails=reply;
+   console.log(emails);
 	}
 });
 
-
+console.log(emails);
+console.log("HI");
 
 var app = express();
 
