@@ -12,10 +12,13 @@ var emails=[]
 storage.get('exists', function (err, reply) {
     //this will happen first time, the rest it will be the dict
     if(reply=="yes"){
-      console.log(emails);
+      storage.get('emails', function (err, reply) {
+		emails=reply;
+	   console.log(emails.toString());
+	});
     }else{
-	emails=reply;
-   console.log(emails.toString());
+	storage.set('emails',[]);
+	storage.set('exists','yes');
 	}
 });
 
@@ -66,7 +69,7 @@ app.post('/subscribe', function(req, res) {//make it so it only does the checkin
  
   }else{
   emails.push(req.body.email);
-  res.redirect('/done');}
+  res.redirect('/');}
 });
 
 var port = Number(process.env.PORT || 3000);

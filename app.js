@@ -69,7 +69,7 @@ app.post('/subscribe', function(req, res) {//make it so it only does the checkin
  
   }else{
   emails.push(req.body.email);
-  res.redirect('/done');}
+  res.redirect('/');}//only problem is no notification comes up
 });
 
 var port = Number(process.env.PORT || 3000);
