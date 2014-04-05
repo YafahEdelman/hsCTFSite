@@ -48,7 +48,7 @@ app.get('/samples', function(req, res) {
 app.get('/done', function(req, res) {
   res.render('done.html');
 });
-function updater(){
+function emailUpdater(){
 	storage.set('emails',emails);//just make this merge stuff a
 }
 setInterval(emailUpdater,1000);//1000 millisecond updating, okay?
