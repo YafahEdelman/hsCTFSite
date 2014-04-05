@@ -13,7 +13,7 @@ storage.get('exists', function (err, reply) {
     //this will happen first time, the rest it will be the dict
     if(reply=="yes"){
       storage.get('emails', function (err, reply) {
-		emails=reply;
+		emails=reply.split(",");
 	   console.log(typeof emails);
            console.log("hhhhhhhhhhhhhi");
 	});
@@ -69,7 +69,7 @@ app.post('/subscribe', function(req, res) {//make it so it only does the checkin
     res.send(emails);//will only work if on one dynamo
  
   }else{
-  emails.push(req.body.email);
+  emails.push(req.body.email.replace(/\,/g,""););
   res.redirect('/');}//only problem is no notification comes up
 });
 
