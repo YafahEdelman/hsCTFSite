@@ -218,6 +218,7 @@ body {
 #slide-1 {
 	background-image: url('../images/wires.png');
 	color: #ffffff;
+	background-color: #002D6B;
 	height: 80%;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -231,6 +232,21 @@ body {
     width: 100%;
 	background-attachment: relative;
 	background-position: center center;
+}
+	#slide-1 img{
+		display: none;
+	}
+
+@media (max-width: 767px) {
+	#slide-1 {
+		background-image: none;
+		height: auto;
+		padding-bottom: none;
+	}
+
+	#slide-1 img {
+		display: inline;
+	}
 }
 
 #slide-1 h1 {

@@ -47,16 +47,6 @@ app.get('/', function(req, res) {
   res.render('index.html');
 });
 
-app.get('/about', function(req, res) {
-  res.render('about.html');
-});
-app.get('/samples', function(req, res) {
-  res.render('samples.html');
-});
-
-app.get('/done', function(req, res) {
-  res.render('done.html');
-});
 function emailUpdater(){
 	storage.set('emails',emails);//just make this merge stuff a
 }
