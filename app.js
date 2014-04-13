@@ -48,11 +48,12 @@ app.get('/', function(req, res) {
 });
 
 function emailUpdater(){
-      emails=emails.filter(function(elem, pos) {
-    return emails.indexOf(elem) == pos;
-});
       storage.get('emails', function (err, reply) {
 		emails=emails.concat(reply.split(","));
+	        emails=emails.filter(function(elem, pos) {
+			return emails.indexOf(elem) == pos;
+		});
+		console.log(emails);
 		storage.set('emails',emails);
 		setTimeout(emailUpdater,1000); 
 	});
