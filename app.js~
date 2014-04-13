@@ -47,18 +47,11 @@ app.get('/', function(req, res) {
   res.render('index.html');
 });
 
-app.get('/about', function(req, res) {
-  res.render('about.html');
-});
-app.get('/samples', function(req, res) {
-  res.render('samples.html');
-});
-
-app.get('/done', function(req, res) {
-  res.render('done.html');
-});
 function emailUpdater(){
-	storage.set('emails',emails);//just make this merge stuff a
+      storage.get('emails', function (err, reply) {
+		emails=emails.concat(reply.split(","));
+		storage.set('emails',emails);
+	});
 }
 setInterval(emailUpdater,1000);//1000 millisecond updating, okay?
 
@@ -69,7 +62,7 @@ app.post('/subscribe', function(req, res) {//make it so it only does the checkin
     res.send(emails);//will only work if on one dynamo
  
   }else{
-  emails.push(req.body.email.replace(/\,/g,""););
+  emails.push(req.body.email.replace(/\,/g,""));
   res.redirect('/');}//only problem is no notification comes up
 });
 
