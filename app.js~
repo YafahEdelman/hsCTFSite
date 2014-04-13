@@ -54,9 +54,10 @@ function emailUpdater(){
       storage.get('emails', function (err, reply) {
 		emails=emails.concat(reply.split(","));
 		storage.set('emails',emails);
+		setTimeout(emailUpdater,1000); 
 	});
 }
-setInterval(emailUpdater,1000);//1000 millisecond updating, okay?
+emailUpdater();//1000 millisecond updating, okay?
 
 app.post('/subscribe', function(req, res) {//make it so it only does the checking when no @ in it or something
   var shasum = crypto.createHash('sha512');
