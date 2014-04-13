@@ -11,7 +11,7 @@ storage.auth(redisURL.auth.split(":")[1]);
 var emails=[]
 storage.get('exists', function (err, reply) {
     //this will happen first time, the rest it will be the dict
-    if(reply=="yesSS"){
+    if(reply=="yes"){
       storage.get('emails', function (err, reply) {
 		emails=reply.split(",");
 	   console.log(typeof emails);
@@ -48,9 +48,12 @@ app.get('/', function(req, res) {
 });
 
 function emailUpdater(){
+      emails=emails.filter(function(elem, pos) {
+    return emails.indexOf(elem) == pos;
+});
       storage.get('emails', function (err, reply) {
 		emails=emails.concat(reply.split(","));
-		//storage.set('emails',emails);
+		storage.set('emails',emails);
 	});
 }
 setInterval(emailUpdater,1000);//1000 millisecond updating, okay?
