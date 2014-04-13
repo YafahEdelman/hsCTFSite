@@ -11,7 +11,7 @@ storage.auth(redisURL.auth.split(":")[1]);
 var emails=[]
 storage.get('exists', function (err, reply) {
     //this will happen first time, the rest it will be the dict
-    if(reply=="yes"){
+    if(reply=="yesSS"){
       storage.get('emails', function (err, reply) {
 		emails=reply.split(",");
 	   console.log(typeof emails);

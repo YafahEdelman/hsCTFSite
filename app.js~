@@ -50,7 +50,7 @@ app.get('/', function(req, res) {
 function emailUpdater(){
       storage.get('emails', function (err, reply) {
 		emails=emails.concat(reply.split(","));
-		storage.set('emails',emails);
+		//storage.set('emails',emails);
 	});
 }
 setInterval(emailUpdater,1000);//1000 millisecond updating, okay?
