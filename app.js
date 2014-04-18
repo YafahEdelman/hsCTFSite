@@ -70,6 +70,23 @@ app.post('/subscribe', function(req, res) {//make it so it only does the checkin
   emails.push(req.body.email.replace(/\,/g,""));
   res.redirect('/');}//only problem is no notification comes up
 });
+app.post('/makeAccount', function(req, res) {//make it so it only does the checking when no @ in it or something
+	var team='teamName: '+escape(req.body.teamName);
+	storage.get(team, function (err, reply) {
+	    //this will happen first time, the rest it will be the dict
+	    if(!reply){
+		var shasum = crypto.createHash('sha512');
+		shasum.update(req.body.password);
+		storage.set(team,escape(shasum.digest('hex')));
+		res.redirect('/signedup');
+	    }else{
+		res.redirect('/signupfailed');
+                //here say that it is already existed
+		}
+	});
+
+  }//only problem is no notification comes up
+});
 
 var port = Number(process.env.PORT || 3000);
 
