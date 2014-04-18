@@ -84,8 +84,6 @@ app.post('/makeAccount', function(req, res) {//make it so it only does the check
                 //here say that it is already existed
 		}
 	});
-
-  }//only problem is no notification comes up
 });
 
 var port = Number(process.env.PORT || 3000);
