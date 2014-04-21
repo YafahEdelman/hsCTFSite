@@ -562,3 +562,12 @@ pre {
 .mono {
 	font-family: monospace;
 }
+
+#faq p{
+	text-align: left;
+	font-size: 16px;
+}
+
+#faq h2{
+	padding: 0px;
+}
