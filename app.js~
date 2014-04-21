@@ -50,10 +50,15 @@ app.get('/', function(req, res) {
 function emailUpdater(){
       storage.get('emails', function (err, reply) {
 		emails=emails.concat(reply.split(","));
+	        emails=emails.filter(function(elem, pos) {
+			return emails.indexOf(elem) == pos;
+		});
+		//console.log(emails);
 		storage.set('emails',emails);
+		setTimeout(emailUpdater,1000); 
 	});
 }
-setInterval(emailUpdater,1000);//1000 millisecond updating, okay?
+emailUpdater();//1000 millisecond updating, okay?
 
 app.post('/subscribe', function(req, res) {//make it so it only does the checking when no @ in it or something
   var shasum = crypto.createHash('sha512');
@@ -64,6 +69,23 @@ app.post('/subscribe', function(req, res) {//make it so it only does the checkin
   }else{
   emails.push(req.body.email.replace(/\,/g,""));
   res.redirect('/');}//only problem is no notification comes up
+});
+app.post('/makeAccount', function(req, res) {//make it so it only does the checking when no @ in it or something
+	var team='teamName: '+escape(req.body.teamName);
+	storage.get(team, function (err, reply) {
+	    //this will happen first time, the rest it will be the dict
+	    if(!reply){
+		var shasum = crypto.createHash('sha512');
+		shasum.update(req.body.password);
+		storage.set(team,escape(shasum.digest('hex')));
+		res.redirect('/signedup');
+	    }else{
+		res.redirect('/signupfailed');
+                //here say that it is already existed
+		}
+	});
+
+  }//only problem is no notification comes up
 });
 
 var port = Number(process.env.PORT || 3000);
