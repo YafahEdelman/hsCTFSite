@@ -571,3 +571,9 @@ pre {
 #faq h2{
 	padding: 0px;
 }
+
+#notice {
+	border: 2px solid white;
+	padding: 10px;
+	margin: 10px 20px;
+}
