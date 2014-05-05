@@ -344,6 +344,10 @@ body {
 		font-size: 80px;
 		color: white;
 	}
+
+	#slide-2 a {
+		color: #ffffff;
+	}
 	
 
 @media (max-width: 767px) {
@@ -373,13 +377,15 @@ body {
 }
 
 #slide-3 {
-	background-color: #AA3939;
-	color: #e4e6e5;
+	background-color: #ffffff;
+	color: #1c1c1c;
 	padding-top: 90px;
 }
 
 	#slide-3 img {
-		max-width: 50%;
+		max-width: 100%;
+		max-height: 300px;
+		padding-bottom: 20px;
 	}
 
 #slide-4 {
@@ -576,4 +582,5 @@ pre {
 	border: 2px solid white;
 	padding: 10px;
 	margin: 10px 20px;
+	background-color: #2F79AD;
 }
