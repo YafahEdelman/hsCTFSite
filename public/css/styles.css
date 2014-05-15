@@ -491,10 +491,6 @@ body {
 	z-index: 99999;
 }
 
-.with-hover-text span {
-	display: none;
-}
-
 #arrows {
 	bottom: 5%;
 	height: 80px;
@@ -583,4 +579,9 @@ pre {
 	padding: 10px;
 	margin: 10px 20px;
 	background-color: #2F79AD;
+}
+
+#prizes {
+	max-width: 100%;
+	margin-left: 0px;
 }
