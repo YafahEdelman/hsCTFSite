@@ -297,6 +297,7 @@ body {
 #slide-2 {
 	background-color: #3c98d8;
 	color: #e4e6e5;
+	padding-top:20px;
 }
 
 	.title-row {
@@ -314,7 +315,7 @@ body {
 	.subtitle-row {
 		font-size: 35px;
 		padding-bottom: 40px;
-		padding-top: 40px;
+		padding-top: 0px;
 	}
 	
 	.content-row {
@@ -358,8 +359,6 @@ body {
 	
 	.subtitle-row {
 		font-size: 26px;
-		padding-bottom: 26px;
-		padding-top: 26px;
 	}
 	
 	.content-row {
@@ -577,7 +576,9 @@ pre {
 #notice {
 	border: 2px solid white;
 	padding: 10px;
-	margin: 10px 20px;
+	width: 100%;
+	min-height: 50px;
+	margin: 10px 0px;
 	background-color: #2F79AD;
 }
 
