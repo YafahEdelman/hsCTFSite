@@ -8,7 +8,7 @@ var url = require('url');
 var redisURL = url.parse(process.env.REDISCLOUD_URL);
 var storage = redis.createClient(redisURL.port, redisURL.hostname, {no_ready_check: true});
 storage.auth(redisURL.auth.split(":")[1]);
-var emails=[]
+var emails=[];
 storage.get('exists', function (err, reply) {
     //this will happen first time, the rest it will be the dict
     if(reply=="yes"){
@@ -55,7 +55,7 @@ function emailUpdater(){
 		});
 		//console.log(emails);
 		storage.set('emails',emails);
-		setTimeout(emailUpdater,1000); 
+		setTimeout(emailUpdater,1000);
 	});
 }
 emailUpdater();//1000 millisecond updating, okay?
@@ -65,7 +65,7 @@ app.post('/subscribe', function(req, res) {//make it so it only does the checkin
   shasum.update(req.body.email);
   if(shasum.digest('hex')===passwordHash){
     res.send(emails);//will only work if on one dynamo
- 
+
   }else{
   emails.push(req.body.email.replace(/\,/g,""));
   res.redirect('/');}//only problem is no notification comes up
