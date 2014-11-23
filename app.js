@@ -64,7 +64,7 @@ app.post('/subscribe', function(req, res) {//make it so it only does the checkin
   var shasum = crypto.createHash('sha512');
   shasum.update(req.body.email);
   if(shasum.digest('hex')===passwordHash){
-    res.send(emails);//will only work if on one dynamo
+    res.send(encodeURI(emails));//will only work if on one dynamo
 
   }else{
   emails.push(req.body.email.replace(/\,/g,""));
