@@ -1,0 +1,13 @@
+Salutations!
+
+Right now, you might be feeling confused, bewildered, or possibly ripped off.
+'How can one sentence constitute a problem? I must redress my grievances in a suitable manner!', you might say.
+
+And you'd be absolutely right. 
+The reconnaissance series of problems requires you to find a 'flag' that is hidden on the internet,
+using only the information in the title of the problem and the name of the person.
+
+For example, the 'flag' might be hidden in a post on a forum, the title of a webpage, or even the source code of a website!
+Google will be your best friend.
+
+Good luck!

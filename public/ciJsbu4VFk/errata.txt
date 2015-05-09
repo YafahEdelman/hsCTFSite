@@ -1,0 +1,21 @@
+5/20/2014 10:48 EST
+
+Change: awe is now 500 points. 
+
+Problem Added: My name is (worth 600 points)
+
+We have been informed the grader for FRACTRAN 2 was accepting incorrect solutions. 
+We have re-evaluated all submitted solutions and removed any incorrect ones, as well as fixed the grader. 
+If you submitted a solution to FRACTRAN 2, make sure to check whether it is still correct or not! 
+
+Problem Added: Keith the Biologist (worth 500 points)
+
+5/21/2014 12:06 EST
+
+--Problem Temporarily Removed: Keith the Biologist (worth 500 points)--
+Keith the Biologist(500 points) has been restored.
+
+5/21/2014 11:16 EST
+
+Keith the Biologist has been dropped to 400 points.
+Sleepless Soccer Balls has been upgraded to 500 points.

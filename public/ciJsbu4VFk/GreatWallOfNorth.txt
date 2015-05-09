@@ -1,0 +1,18 @@
+Great Wall of North
+
+High School North recently built a wall around campus to prevent Pirates from entering the building, but they need
+to ensure that nobody will climb over it. Therefore, the administration has decided to hire guards to monitor the
+outside of the wall. 
+
+There are N applicants for the position of guard, but only a few can be accepted. Each guard j can only monitor the range
+in between integers s[j] and f[j] inclusive (you can think of the wall as a number line from 0 to an integer K). Additionally, it's proper etiquette to not monitor a region another guard is monitoring. In other words, no two guards can overlap regions (some of the applicants will overlap in range though).
+Each guard j must also be paid p[j] dollars.
+
+You are given a text file where each row has three space-separated integers that correspond to a guard. The first integer
+is the s[i], the second is f[i], and the third is p[i].
+
+N = 51500;
+K = 31078657
+
+Your goal is to find the minimum amount of money the school has to pay to have every coordinate between 0 and K (inclusive)
+monitored.

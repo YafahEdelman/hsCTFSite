@@ -1,0 +1,21 @@
+Keith the Urban Planner
+
+Keith the Knight decided to become urban planner, and he's working on predicting the cost of building a road system to connect the major buildings of the bustling city 
+of Plainsboro NJ. 
+
+There is already a set of bidirectional (all non-one-way) roads connecting all the big buildings in the city, but the two most important buildings in this city are the 
+School and the House of Edels. Because the path between these two buildings is so important, Keith must pay for the roads that are used to connect them. 
+Fortunately for him, he is given a set of distinct positive integer prices, and he has to assign each road a cost that is within the set. No two roads can have the same cost. 
+
+Every road connects two buildings, but every two buildings does not necessarily have a road in between them.
+Every road must get a cost, but not every price in the given set will necessarily be used if there are fewer roads connecting the two buildings than prices.
+
+You need to find the lowest cost needed to pay for all the roads needed so that there is a path of roads with costs from the School to the House of Edels. 
+
+You are given two text files. Each row in list.txt corresponds to a building, 
+and each row has a number of space-separated integers (each row has a different quantity of these numbers).
+
+The first integer is the I.D of the building. The rest of the numbers in the row are the I.Ds of the buildings that are
+directly connected to this building. The I.D of the School is 0, and the I.D of the House of Edels is 19999. 
+
+prices.txt is a list of the possible prices for the roads.

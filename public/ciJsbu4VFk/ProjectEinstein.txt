@@ -1,0 +1,15 @@
+Project Einstein Problem 1000401
+
+Let d(k) be the sum of all divisors of k. 
+
+We define the function S(n) to be the sum over all 5-tuples of positive integers (i,j,k,l,m) of d(i)*d(j)*d(k)*d(l)*d(m) where i+j+k+l+m=n.
+
+For example, S(7) = 
+d(1)*d(1)*d(1)*d(1)*d(3) + d(1)*d(1)*d(1)*d(3)*d(1) + d(1)*d(1)*d(3)*d(1)*d(1) + d(1)*d(3)*d(1)*d(1)*d(1) + d(3)*d(1)*d(1)*d(1)*d(1) + 
+d(1)*d(1)*d(1)*d(2)*d(2) + d(1)*d(1)*d(2)*d(1)*d(2) + d(1)*d(2)*d(1)*d(1)*d(2) + d(2)*d(1)*d(1)*d(1)*d(2) + d(1)*d(1)*d(2)*d(2)*d(1) + 
+d(1)*d(2)*d(1)*d(2)*d(1) + d(2)*d(1)*d(1)*d(2)*d(1) + d(1)*d(2)*d(2)*d(1)*d(1) + d(2)*d(1)*d(2)*d(1)*d(1) + d(2)*d(2)*d(1)*d(1)*d(1) 
+= 110.
+
+You are given that S(10^3) mod 1000000007 = 932450247 and S(10^5) mod 1000000007 = 102356396.
+
+Find S(10^15) mod 1000000007.

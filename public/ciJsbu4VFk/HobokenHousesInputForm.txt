@@ -1,0 +1,6 @@
+N lines of the form (x, y) where x,y are integers that indicate the displacement from Keith's current position to his new position.
+Keith walks along the wall in straight lines.
+Keith starts at the origin. It is guaranteed that at the end of N lines, Keith will return to the origin.
+Keith's path has no self-intersections.
+
+1 <= N <= 2^7, -(2^32) <= x,y <= (2^32)

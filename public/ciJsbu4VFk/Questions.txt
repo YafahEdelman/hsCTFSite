@@ -1,0 +1,60 @@
+Confused about what a problem is asking for? You've come to the right place!
+There are a few main types of problems you'll find on HSCTF.  All problems here should fall into one of these categories.
+
+Recon:  You are given a file, a picture, or a bit of text, and using that information you need to find the flag hidden in the file, in the picture, or on the web.  You will know once you've found it.
+The recon problems are (in no particular order):
+-Find the Code
+-Permission Denied
+-Words Misheard
+-Asseragod
+-Number One Fan
+-On Entropy In Systems
+-Who Is It?
+-Can you JPEG?
+-awe
+-be
+-yangwy
+
+Crypto:  You are given some encrypted text and you need to decrypt it to find the flag. A variety of different ciphers are used.
+The crypto problems are (in no particular order):
+-Decitroll
+-Perfekta Kodo
+-NomNomCipher
+-Caesar's Palace
+-RSA
+-20XX
+-8 Funky  Yellow Ducks
+
+Reverse Engineering:  For these problems you are given some code that 
+takes input and checks to see if it is correct. You need to figure out from the code what the correct input is--that will be the flag.
+The reverse engineering problems are (in no particular order):
+-Such reverse much doge
+-Obfuscated Python
+-Connect the colors
+-Just Learning
+-Lambda 1
+-Lambda 2
+-Lambda 3
+-slashey
+
+Algo:  For these problems you will need to design an efficient algorithm to solve the problem in a reasonable amount of time.  All problems will either have a number you need to calculate or a test case you need to evaluate.
+The algo problems are (in no particular order):
+-Keith Numbers
+-Keith Numbers 2
+-1000 Code Monkeys
+-Illiterate Haystack
+-Keith the Urban Planner
+-Project Einstein
+-Chips in the Middle
+-Great Wall of North
+-Hoboken Houses
+-Sleepless Soccerballs
+
+Special:  These are some special programming-related problems which will require you to think outside the box and program in new ways. This year, the special problems focus on the esoteric language FRACTRAN.
+The special problems are:
+-FRACTRAN 1
+-FRACTRAN 2
+-FRACTRAN 3
+-FRACTRAN 4
+-FRACTRAN 5
+-FRACTRAN 6

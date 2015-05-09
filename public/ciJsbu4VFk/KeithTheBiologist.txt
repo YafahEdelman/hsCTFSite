@@ -1,0 +1,10 @@
+Keith the Biologist
+
+Keith decided to be a biologist.
+
+He's given a food cycle where there are a variety of species and arrows in between species. An arrow points from the prey to the predator of that prey. 
+A species A is also the prey of another species B if there is a chain of predatory-prey species from A to B. In other words, suppose a lion can eat a mouse which can eat grass. The predatory-prey relationships in this food cycle are lion-mouse, mouse-grass, and lion-grass. It's possible for A to be the predator of B and for B to be the predator of A. For example, a tiger can eat a lion and a lion can eat a tiger.
+
+You are given a text file where each row has a number of space-separated integers. The first integer is the I.D number of the species, and the rest of the integers on the row are the I.D numbers of the species that are predators to this species. I.D numbers are all the integers from 0 to 9100.
+
+You are to find two I.D numbers A and B such that A is not a predator of B and B is not a predator of A. There might be multiple such pairs, but you are only required to find one. You will submit these I.D numbers as space-separated integers as the flag. The order of the I.D numbers in your submission is irrelevant ("1 2" is the same as "2 1").

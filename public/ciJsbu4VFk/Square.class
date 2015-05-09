@@ -1,0 +1,21 @@
+package clubstuff;
+
+import java.io.PrintStream;
+import javax.swing.JButton;
+
+public class Square
+{
+  public JButton button;
+  public int colorID;
+
+  public Square(JButton button, int colorID)
+  {
+    this.button = button;
+    this.colorID = colorID;
+  }
+
+  public static void main(String[] args) {
+    String s = "100001010001001001010001100100100010100100001100100100100100100001100100100001001001100100100100100100100001010001100100100100100100100001001001100100100100100100100100100001100100100100100001010001001001100100100100100100100100100100100100001010001001010001001010001100100100100100100100100100100100";
+    System.out.println(s.hashCode());
+  }
+}
