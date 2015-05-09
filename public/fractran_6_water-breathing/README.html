@@ -686,7 +686,7 @@
 <p>By Aaron Berger</p>
 <h2 id="problem">Problem</h2>
 <p>After reading about <a href="http://en.wikipedia.org/w/index.php?title=Up_arrow_notation" target="_blank">Knuth&#39;s Up-Arrow Notation</a>, Keith has decided he wants to implement it in FRACTRAN.
-He wrote a program that you can find <a href="http://compete.hsctf.com/ciJsbu4VFk/UpArrowProgram.txt" target="_blank">here</a> as a list of space-separated integers, <a href="http://compete.hsctf.com/ciJsbu4VFk/UpArrow2.txt" target="_blank">here</a> if you like the standard format better, or in the <strong>Appendix</strong> in standard Java array format, that will take input \(2^a\times3^n\times5^b\) and output \(5^{a (\uparrow^{n-1}) b}\).</p>
+He wrote a program that you can find <a href="http://hsctf.com/ciJsbu4VFk/UpArrowProgram.txt" target="_blank">here</a> as a list of space-separated integers, <a href="http://hsctf.com/ciJsbu4VFk/UpArrow2.txt" target="_blank">here</a> if you like the standard format better, or in the <strong>Appendix</strong> in standard Java array format, that will take input \(2^a\times3^n\times5^b\) and output \(5^{a (\uparrow^{n-1}) b}\).</p>
 <p>For example, a single up-arrow represents exponentiation, so to calculate \(6\uparrow4= 6^4\) he would input \(2^6\times3^2\times5^4= 360000\).
 A double up-arrow represents tetration and to calculate \(2\uparrow\uparrow3=2^{2^2}\) he would input \(2^2\times3^3\times5^3=13500\).  Both of these test cases worked splendidly.</p>
 <p>Unfortunately, when he tried to calculate \(5\uparrow\uparrow3=5^{5^5}\) (by inputting \(2^5\times3^3\times5^3=108000\)), it didn&#39;t evaluate immediately.

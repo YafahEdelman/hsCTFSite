@@ -2,7 +2,7 @@
 
 ##Problem
 Keith the Knight doesn't like slashing because he feels it is too violent. Because he's in the city of Slashville, he needs to protect himself.
-Help Keith protect himself by finding the flag in this [file](compete.hsctf.com/ciJsbu4VFk/slashey.o)
+Help Keith protect himself by finding the flag in this [file](hsctf.com/ciJsbu4VFk/slashey.o)
 
 ##Solution
 

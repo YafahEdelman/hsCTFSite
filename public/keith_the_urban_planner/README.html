@@ -685,10 +685,10 @@
 <p>Type: Algorithm
 By Alok Tripathy</p>
 <h2 id="problem">Problem</h2>
-<p>The problem statement is <a href="http://compete.hsctf.com/ciJsbu4VFk/KeithTheUrbanPlanner.txt" target="_blank">here</a>.
+<p>The problem statement is <a href="http://hsctf.com/ciJsbu4VFk/KeithTheUrbanPlanner.txt" target="_blank">here</a>.
 Here are the necessary text files:
-<a href="http://compete.hsctf.com/ciJsbu4VFk/UrbanPlanner.txt" target="_blank">Urban Planner</a>.
-<a href="http://compete.hsctf.com/ciJsbu4VFk/Prices.txt" target="_blank">Prices</a>.</p>
+<a href="http://hsctf.com/ciJsbu4VFk/UrbanPlanner.txt" target="_blank">Urban Planner</a>.
+<a href="http://hsctf.com/ciJsbu4VFk/Prices.txt" target="_blank">Prices</a>.</p>
 <h2 id="solution">Solution</h2>
 <p>You&#39;re given a graph G = (V, E). To find the lowest possible price one has to pay for the roads, one has to find the fewest number of roads needed to be crossed to go from the School to the House of Edels (which, by the way, is a play on the name &quot;Edelman&quot;. We did most of the work at their house). This can be done with a <a href="http://en.wikipedia.org/wiki/Breadth-first_search" target="_blank">BFS</a> (some people said they used <a href="http://en.wikipedia.org/wiki/Dijkstra%27s_algorithm" target="_blank">Dijkstra</a> with all edge weights equalling 1, which also works). The fewest number of roads that connects these two buildings is 8. Now that we know the fewest number of roads necessary, all we need is the 8 smallest road prices. This can be done by sorting the array of prices and taking the first 8 elements. The sum of these elements is the answer, <strong>480</strong>.</p>
 <p>Here is some Java code that does <a href="https://dl.dropboxusercontent.com/u/60294520/KeithTheUrbanPlanner.java" target="_blank">this</a></p>
