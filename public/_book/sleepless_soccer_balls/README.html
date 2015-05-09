@@ -1,0 +1,811 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="../manifest.appcache">
+    
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        
+        <meta charset="UTF-8">
+        <title>Sleepless Soccer Balls | HSCTF Write-ups</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="">
+        <meta name="description" content="This was fun. Running a CTF was an exhilarating, amazing experience, and from what we gather, so was participating. The idea for HSCTF germinated after we (most of the organizers) participated in picoCTF and CSAW CTF Quals. We enjoyed both competitions tremendously, but were dismayed to find that there were very few entry-level CTFs, and no high school CTFs in the 2013-14 academic year. This year, we started a computer science club in our school, and ran a small in-school beginner CTF. It was a huge success. We knew we wanted to make something bigger. We also knew we didn&#39;t want our CTF to be purely about security. HSCTF shows that people can learn any aspect of computer science from a CTF.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../2/README.html" />
+        
+        
+        <link rel="prev" href="../can_you_jpeg/README.html" />
+        
+
+        <meta property="og:title" content="Sleepless Soccer Balls | HSCTF Write-ups">
+        <meta property="og:site_name" content="HSCTF Write-ups">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+        
+    </head>
+    <body>
+        
+        
+
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+
+
+        
+    <div class="book"  data-level="5.3" data-basepath=".." data-revision="1401328164507">
+    <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    
+    <a href="https://github.com/null" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="btn-group btn-block">
+        <button id="reduce-font-size" class="btn btn-default">A</button>
+        <button id="enlarge-font-size" class="btn btn-default">A</button>
+    </div>
+
+    <ul class="list-group font-family-list">
+        <li class="list-group-item" data-font="0">Serif</li>
+        <li class="list-group-item" data-font="1">Sans</li>
+    </ul>
+
+    <div class="btn-group btn-group-xs btn-block color-theme-list">
+        <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../" >HSCTF Write-ups</a>
+    </h1>
+</div>
+
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+
+        
+
+        
+
+        
+
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+    
+        <li class="chapter " data-level="1" data-path="100_point_problems/README.html">
+            
+            <a href="../100_point_problems/README.html">
+                <i class="fa fa-check"></i> <b>1.</b> 100 Point Problems
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="words_misheard/README.html">
+            
+            <a href="../words_misheard/README.html">
+                <i class="fa fa-check"></i> <b>1.1.</b> Words Misheard
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="fractran_1_introduction/README.html">
+            
+            <a href="../fractran_1_introduction/README.html">
+                <i class="fa fa-check"></i> <b>1.2.</b> FRACTRAN 1: Introduction
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chips_in_the_middle/README.html">
+            
+            <a href="../chips_in_the_middle/README.html">
+                <i class="fa fa-check"></i> <b>1.3.</b> Chips In The Middle
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="just_learning/README.html">
+            
+            <a href="../just_learning/README.html">
+                <i class="fa fa-check"></i> <b>1.4.</b> Just Learning
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="caesars_palace/README.html">
+            
+            <a href="../caesars_palace/README.html">
+                <i class="fa fa-check"></i> <b>1.5.</b> Caesar&#39;s Palace
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="1000_code_monkeys/README.html">
+            
+            <a href="../1000_code_monkeys/README.html">
+                <i class="fa fa-check"></i> <b>1.6.</b> 1000 Code Monkeys
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="200_point_problems/README.html">
+            
+            <a href="../200_point_problems/README.html">
+                <i class="fa fa-check"></i> <b>2.</b> 200 Point Problems
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="asseragod/README.html">
+            
+            <a href="../asseragod/README.html">
+                <i class="fa fa-check"></i> <b>2.1.</b> Asseragod
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="who_is_it/README.html">
+            
+            <a href="../who_is_it/README.html">
+                <i class="fa fa-check"></i> <b>2.2.</b> Who Is It?
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="yangwy/README.html">
+            
+            <a href="../yangwy/README.html">
+                <i class="fa fa-check"></i> <b>2.3.</b> yangwy
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="decitroll/README.html">
+            
+            <a href="../decitroll/README.html">
+                <i class="fa fa-check"></i> <b>2.4.</b> Decitroll
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="fractran_2_immersion/README.html">
+            
+            <a href="../fractran_2_immersion/README.html">
+                <i class="fa fa-check"></i> <b>2.5.</b> FRACTRAN 2: Immersion
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="find_the_code/README.html">
+            
+            <a href="../find_the_code/README.html">
+                <i class="fa fa-check"></i> <b>2.6.</b> Find the Code
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="nomnomcipher/README.html">
+            
+            <a href="../nomnomcipher/README.html">
+                <i class="fa fa-check"></i> <b>2.7.</b> NomNomCipher
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="obfuscated_python/README.html">
+            
+            <a href="../obfuscated_python/README.html">
+                <i class="fa fa-check"></i> <b>2.8.</b> Obfuscated Python
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="slashey/README.html">
+            
+            <a href="../slashey/README.html">
+                <i class="fa fa-check"></i> <b>2.9.</b> Slashey
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="300_point_problems/README.html">
+            
+            <a href="../300_point_problems/README.html">
+                <i class="fa fa-check"></i> <b>3.</b> 300 Point Problems
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="great_wall_of_north/README.html">
+            
+            <a href="../great_wall_of_north/README.html">
+                <i class="fa fa-check"></i> <b>3.1.</b> Great Wall of North
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="keith_numbers_1/README.html">
+            
+            <a href="../keith_numbers_1/README.html">
+                <i class="fa fa-check"></i> <b>3.2.</b> Keith Numbers 1
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="connect_the_colors/README.html">
+            
+            <a href="../connect_the_colors/README.html">
+                <i class="fa fa-check"></i> <b>3.3.</b> Connect The Colors
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="perfekta_kodo/README.html">
+            
+            <a href="../perfekta_kodo/README.html">
+                <i class="fa fa-check"></i> <b>3.4.</b> Perfekta Kodo
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="such_reverse_much_doge/README.html">
+            
+            <a href="../such_reverse_much_doge/README.html">
+                <i class="fa fa-check"></i> <b>3.5.</b> such reverse much doge
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="keith_the_urban_planner/README.html">
+            
+            <a href="../keith_the_urban_planner/README.html">
+                <i class="fa fa-check"></i> <b>3.6.</b> Keith The Urban Planner
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="8_funky_yellow_ducks/README.html">
+            
+            <a href="../8_funky_yellow_ducks/README.html">
+                <i class="fa fa-check"></i> <b>3.7.</b> 8 Funky Yellow Ducks
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="fractran_3_the_plunge/README.html">
+            
+            <a href="../fractran_3_the_plunge/README.html">
+                <i class="fa fa-check"></i> <b>3.8.</b> FRACTRAN 3: The Plunge
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="permission_denied/README.html">
+            
+            <a href="../permission_denied/README.html">
+                <i class="fa fa-check"></i> <b>3.9.</b> Permission Denied
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="be/README.html">
+            
+            <a href="../be/README.html">
+                <i class="fa fa-check"></i> <b>3.10.</b> be
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.11" data-path="hoboken_houses/README.html">
+            
+            <a href="../hoboken_houses/README.html">
+                <i class="fa fa-check"></i> <b>3.11.</b> Hoboken Houses
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="500_point_problems/README.html">
+            
+            <a href="../500_point_problems/README.html">
+                <i class="fa fa-check"></i> <b>4.</b> 400 Point Problems
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="a_needle_in_an_illiterate_haystack/README.html">
+            
+            <a href="../a_needle_in_an_illiterate_haystack/README.html">
+                <i class="fa fa-check"></i> <b>4.1.</b> A Needle in an Illiterate Haystack
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="custom_rsa/README.html">
+            
+            <a href="../custom_rsa/README.html">
+                <i class="fa fa-check"></i> <b>4.2.</b> Custom RSA
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="number_one_fan/README.html">
+            
+            <a href="../number_one_fan/README.html">
+                <i class="fa fa-check"></i> <b>4.3.</b> Number One Fan
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="20xx/README.html">
+            
+            <a href="../20xx/README.html">
+                <i class="fa fa-check"></i> <b>4.4.</b> 20XX
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="keith_numbers_2/README.html">
+            
+            <a href="../keith_numbers_2/README.html">
+                <i class="fa fa-check"></i> <b>4.5.</b> Keith Numbers 2
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="keith_the_biologist/README.html">
+            
+            <a href="../keith_the_biologist/README.html">
+                <i class="fa fa-check"></i> <b>4.6.</b> Keith the Biologist
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="fractran_4_diving_deep/README.html">
+            
+            <a href="../fractran_4_diving_deep/README.html">
+                <i class="fa fa-check"></i> <b>4.7.</b> FRACTRAN 4: Diving Deep
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="1/README.html">
+            
+            <a href="../1/README.html">
+                <i class="fa fa-check"></i> <b>4.8.</b> λ1
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="on_entropy_in_systems/README.html">
+            
+            <a href="../on_entropy_in_systems/README.html">
+                <i class="fa fa-check"></i> <b>4.9.</b> On Entropy In Systems
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="500_point_problems_temp/README.html">
+            
+            <a href="../500_point_problems_temp/README.html">
+                <i class="fa fa-check"></i> <b>5.</b> 500 Point Problems
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="awe/README.html">
+            
+            <a href="../awe/README.html">
+                <i class="fa fa-check"></i> <b>5.1.</b> awe
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="can_you_jpeg/README.html">
+            
+            <a href="../can_you_jpeg/README.html">
+                <i class="fa fa-check"></i> <b>5.2.</b> Can You JPEG?
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="sleepless_soccer_balls/README.html">
+            
+            <a href="../sleepless_soccer_balls/README.html">
+                <i class="fa fa-check"></i> <b>5.3.</b> Sleepless Soccer Balls
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="2/README.html">
+            
+            <a href="../2/README.html">
+                <i class="fa fa-check"></i> <b>5.4.</b> λ2
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="fractran_5_fully_submerged/README.html">
+            
+            <a href="../fractran_5_fully_submerged/README.html">
+                <i class="fa fa-check"></i> <b>5.5.</b> FRACTRAN 5: Fully Submerged
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="600_point_problems/README.html">
+            
+            <a href="../600_point_problems/README.html">
+                <i class="fa fa-check"></i> <b>6.</b> 600 Point Problems
+            </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="project_einstein/README.html">
+            
+            <a href="../project_einstein/README.html">
+                <i class="fa fa-check"></i> <b>6.1.</b> Project Einstein
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="fractran_6_water-breathing/README.html">
+            
+            <a href="../fractran_6_water-breathing/README.html">
+                <i class="fa fa-check"></i> <b>6.2.</b> FRACTRAN 6: Water-Breathing
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="3/README.html">
+            
+            <a href="../3/README.html">
+                <i class="fa fa-check"></i> <b>6.3.</b> λ3
+            </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="chapter/README.html">
+            
+            <a href="../chapter/README.html">
+                <i class="fa fa-check"></i> <b>6.4.</b> My name is
+            </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 86%;min-width: 84%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../100_point_problems/README.html" title="100 Point Problems" class="chapter done new-chapter" data-progress="1" style="left: 2%;"></a>
+    
+        <a href="../words_misheard/README.html" title="Words Misheard" class="chapter done " data-progress="1.1" style="left: 4%;"></a>
+    
+        <a href="../fractran_1_introduction/README.html" title="FRACTRAN 1: Introduction" class="chapter done " data-progress="1.2" style="left: 6%;"></a>
+    
+        <a href="../chips_in_the_middle/README.html" title="Chips In The Middle" class="chapter done " data-progress="1.3" style="left: 8%;"></a>
+    
+        <a href="../just_learning/README.html" title="Just Learning" class="chapter done " data-progress="1.4" style="left: 10%;"></a>
+    
+        <a href="../caesars_palace/README.html" title="Caesar&#39;s Palace" class="chapter done " data-progress="1.5" style="left: 12%;"></a>
+    
+        <a href="../1000_code_monkeys/README.html" title="1000 Code Monkeys" class="chapter done " data-progress="1.6" style="left: 14%;"></a>
+    
+        <a href="../200_point_problems/README.html" title="200 Point Problems" class="chapter done new-chapter" data-progress="2" style="left: 16%;"></a>
+    
+        <a href="../asseragod/README.html" title="Asseragod" class="chapter done " data-progress="2.1" style="left: 18%;"></a>
+    
+        <a href="../who_is_it/README.html" title="Who Is It?" class="chapter done " data-progress="2.2" style="left: 20%;"></a>
+    
+        <a href="../yangwy/README.html" title="yangwy" class="chapter done " data-progress="2.3" style="left: 22%;"></a>
+    
+        <a href="../decitroll/README.html" title="Decitroll" class="chapter done " data-progress="2.4" style="left: 24%;"></a>
+    
+        <a href="../fractran_2_immersion/README.html" title="FRACTRAN 2: Immersion" class="chapter done " data-progress="2.5" style="left: 26%;"></a>
+    
+        <a href="../find_the_code/README.html" title="Find the Code" class="chapter done " data-progress="2.6" style="left: 28%;"></a>
+    
+        <a href="../nomnomcipher/README.html" title="NomNomCipher" class="chapter done " data-progress="2.7" style="left: 30%;"></a>
+    
+        <a href="../obfuscated_python/README.html" title="Obfuscated Python" class="chapter done " data-progress="2.8" style="left: 32%;"></a>
+    
+        <a href="../slashey/README.html" title="Slashey" class="chapter done " data-progress="2.9" style="left: 34%;"></a>
+    
+        <a href="../300_point_problems/README.html" title="300 Point Problems" class="chapter done new-chapter" data-progress="3" style="left: 36%;"></a>
+    
+        <a href="../great_wall_of_north/README.html" title="Great Wall of North" class="chapter done " data-progress="3.1" style="left: 38%;"></a>
+    
+        <a href="../be/README.html" title="be" class="chapter done " data-progress="3.10" style="left: 40%;"></a>
+    
+        <a href="../hoboken_houses/README.html" title="Hoboken Houses" class="chapter done " data-progress="3.11" style="left: 42%;"></a>
+    
+        <a href="../keith_numbers_1/README.html" title="Keith Numbers 1" class="chapter done " data-progress="3.2" style="left: 44%;"></a>
+    
+        <a href="../connect_the_colors/README.html" title="Connect The Colors" class="chapter done " data-progress="3.3" style="left: 46%;"></a>
+    
+        <a href="../perfekta_kodo/README.html" title="Perfekta Kodo" class="chapter done " data-progress="3.4" style="left: 48%;"></a>
+    
+        <a href="../such_reverse_much_doge/README.html" title="such reverse much doge" class="chapter done " data-progress="3.5" style="left: 50%;"></a>
+    
+        <a href="../keith_the_urban_planner/README.html" title="Keith The Urban Planner" class="chapter done " data-progress="3.6" style="left: 52%;"></a>
+    
+        <a href="../8_funky_yellow_ducks/README.html" title="8 Funky Yellow Ducks" class="chapter done " data-progress="3.7" style="left: 54%;"></a>
+    
+        <a href="../fractran_3_the_plunge/README.html" title="FRACTRAN 3: The Plunge" class="chapter done " data-progress="3.8" style="left: 56%;"></a>
+    
+        <a href="../permission_denied/README.html" title="Permission Denied" class="chapter done " data-progress="3.9" style="left: 58%;"></a>
+    
+        <a href="../500_point_problems/README.html" title="400 Point Problems" class="chapter done new-chapter" data-progress="4" style="left: 60%;"></a>
+    
+        <a href="../a_needle_in_an_illiterate_haystack/README.html" title="A Needle in an Illiterate Haystack" class="chapter done " data-progress="4.1" style="left: 62%;"></a>
+    
+        <a href="../custom_rsa/README.html" title="Custom RSA" class="chapter done " data-progress="4.2" style="left: 64%;"></a>
+    
+        <a href="../number_one_fan/README.html" title="Number One Fan" class="chapter done " data-progress="4.3" style="left: 66%;"></a>
+    
+        <a href="../20xx/README.html" title="20XX" class="chapter done " data-progress="4.4" style="left: 68%;"></a>
+    
+        <a href="../keith_numbers_2/README.html" title="Keith Numbers 2" class="chapter done " data-progress="4.5" style="left: 70%;"></a>
+    
+        <a href="../keith_the_biologist/README.html" title="Keith the Biologist" class="chapter done " data-progress="4.6" style="left: 72%;"></a>
+    
+        <a href="../fractran_4_diving_deep/README.html" title="FRACTRAN 4: Diving Deep" class="chapter done " data-progress="4.7" style="left: 74%;"></a>
+    
+        <a href="../1/README.html" title="λ1" class="chapter done " data-progress="4.8" style="left: 76%;"></a>
+    
+        <a href="../on_entropy_in_systems/README.html" title="On Entropy In Systems" class="chapter done " data-progress="4.9" style="left: 78%;"></a>
+    
+        <a href="../500_point_problems_temp/README.html" title="500 Point Problems" class="chapter done new-chapter" data-progress="5" style="left: 80%;"></a>
+    
+        <a href="../awe/README.html" title="awe" class="chapter done " data-progress="5.1" style="left: 82%;"></a>
+    
+        <a href="../can_you_jpeg/README.html" title="Can You JPEG?" class="chapter done " data-progress="5.2" style="left: 84%;"></a>
+    
+        <a href="../sleepless_soccer_balls/README.html" title="Sleepless Soccer Balls" class="chapter done " data-progress="5.3" style="left: 86%;"></a>
+    
+        <a href="../2/README.html" title="λ2" class="chapter  " data-progress="5.4" style="left: 88%;"></a>
+    
+        <a href="../fractran_5_fully_submerged/README.html" title="FRACTRAN 5: Fully Submerged" class="chapter  " data-progress="5.5" style="left: 90%;"></a>
+    
+        <a href="../600_point_problems/README.html" title="600 Point Problems" class="chapter  new-chapter" data-progress="6" style="left: 92%;"></a>
+    
+        <a href="../project_einstein/README.html" title="Project Einstein" class="chapter  " data-progress="6.1" style="left: 94%;"></a>
+    
+        <a href="../fractran_6_water-breathing/README.html" title="FRACTRAN 6: Water-Breathing" class="chapter  " data-progress="6.2" style="left: 96%;"></a>
+    
+        <a href="../3/README.html" title="λ3" class="chapter  " data-progress="6.3" style="left: 98%;"></a>
+    
+        <a href="../chapter/README.html" title="My name is" class="chapter  " data-progress="6.4" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_59">
+                    
+                        <h1 id="sleepless-soccer-balls">Sleepless Soccer Balls</h1>
+<hr>
+<p>Type: Algo</p>
+<p>By: Ernest Chiu</p>
+<h2 id="problem">Problem</h2>
+<p>Keith the factory manager manufactures perfectly identical soccer balls. 
+Unfortunately, they are so perfectly identical that Keith cannot go to sleep at night.</p>
+<p>To remedy this problem, he places identical red stickers on some of the edges of the soccer ball, so that each face of the soccer ball has exactly one edge with a red sticker.</p>
+<p>But now a new problem keeps Keith awake at night--how many soccer balls can Keith make before he makes two identical soccer balls again?</p>
+<p>Soccer balls are regular polyhedra with 12 pentagonal and 20 hexagonal faces.
+Two soccer balls are identical if they can be rotated so that the stickers are on the same edges.
+Faces share edges.</p>
+<p>Find the maximum number of different soccer balls.</p>
+<h2 id="solutions">Solutions</h2>
+<p>tl:dr; FKT, Burnside&#39;s, multi-edges and self-loops</p>
+<p>This problem is very, very frustrating.</p>
+<p>First, let&#39;s consider what the problem is asking. If every face has exactly one edge with a red sticker, then since there are 32 faces, there are exactly 16 stickers. Furthermore, each arrangement of stickers correspond to matching all faces into adjacent pairs. In computer science, this called a <a href="http://en.wikipedia.org/wiki/Perfect_matching" target="_blank">perfect matching</a>.</p>
+<p>Second, we need to count the number of perfect matchings, not up to rotation. The only known algorithm for counting perfect matchings in polynomial time is the <a href="http://en.wikipedia.org/wiki/FKT_algorithm" target="_blank">FKT algorithm</a>.</p>
+<p>Third, we need to count the number of perfect matchings, up to rotation. To deal with the symmetry, we use <a href="http://en.wikipedia.org/wiki/Burnside%27s_Lemma" target="_blank">Burnside&#39;s Lemma</a>. In layman&#39;s terms, we add the number of self-symmetric perfect matchings to the total number of perfect matchings, and divide by the number of symmetries to find the true number of perfect matchings up to symmetry.</p>
+<p>Fourth, we need to find the number of self-symmetric matchings. If we look at the possible rotations, we realize only 15 (those that are 180 rotations about an edge between two hexagons) can fix a perfect matching. (The others are rotations centered on a face.) If a matching is self-symmetric, then the image of matched pair of faces under a 180 rotation must also be a matched pair! So it suffices to identify each vertex with its image, and calculate the number of perfect matchings in this new graph.</p>
+<p>Fifth, this is a very important subtlety. The new graph has self-loops, corresponding to the edge that connects the two hexagonal faces being rotated about, and multi-edges, corresponding to the two edges of the pentagon adjacent to the two hexagonal faces. The only way to deal with self-loops is to run the FKT algorithm twice.</p>
+<p>Finally, assuming the implementation of FKT is correct, we can calculate the total number of matchings to be 562500, the total number of self-similar matchings to be 1168, and the total number of matchings up to rotation to be (562500 + 15*(1168)) / 60 = 9667 different soccer balls.</p>
+<p>Shout out to 0x90.avi for being the only team to solve this problem!</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../can_you_jpeg/README.html" class="navigation navigation-prev " aria-label="Previous page: Can You JPEG?"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../2/README.html" class="navigation navigation-next " aria-label="Next page: λ2"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

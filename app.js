@@ -47,6 +47,15 @@ app.get('/', function(req, res) {
   res.render('index.html');
 });
 
+app.get('/book', function(req, res) {
+  res.render('book.html');
+});
+
+app.get('/book.html', function(req, res) {
+  res.render('book.html');
+});
+
+
 function emailUpdater(){
       storage.get('emails', function (err, reply) {
 		emails=emails.concat(reply.split(","));
