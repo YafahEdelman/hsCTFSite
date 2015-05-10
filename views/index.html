@@ -67,6 +67,13 @@
 		    	</div>
 				<h4 class="font-thin">The second HSCTF is coming  — <span class="font-semibold">May 17-24, 2015</span></h4>
 				<h5 class="font-thin">Note: Team sizes will expand to 5 </h5>
+				<h4 id = "show">View Promo</h4>
+				<dialog id="window">
+    <video id="promo" src="promo.ogg" controls></video>
+    <button id="exit">Close</button>
+</dialog>
+
+
 			</div>
 			<img src="images/wires-mobile.png" class="img-responsive" alt="HSCTF">
 		</div><!-- /container -->
@@ -313,6 +320,15 @@
 
 	<!-- fancybox init -->
 	<script>
+	(function() {
+    var dialog = document.getElementById('window');
+    document.getElementById('show').onclick = function() {
+        dialog.show();
+    };
+    document.getElementById('exit').onclick = function() {
+        dialog.close();
+    };
+})();
 	$(document).ready(function(e) {
 		var lis = $('.nav > li');
 		menu_focus( lis[0], 1 );
