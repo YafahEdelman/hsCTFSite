@@ -56,7 +56,7 @@ app.get('/book.html', function(req, res) {
 });
 
 app.get('/promo', function(req, res) {
-  res.render('views/promo.ogg');
+  res.redirect('/promo.ogg');
 });
 
 
