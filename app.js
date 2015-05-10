@@ -55,6 +55,14 @@ app.get('/book.html', function(req, res) {
   res.render('book.html');
 });
 
+app.get('/promo', function(req, res) {
+  res.render('promo.html');
+});
+
+app.get('/promo.html', function(req, res) {
+  res.render('promo.html');
+});
+
 
 function emailUpdater(){
       storage.get('emails', function (err, reply) {
