@@ -56,12 +56,9 @@ app.get('/book.html', function(req, res) {
 });
 
 app.get('/promo', function(req, res) {
-  res.render('promo.html');
+  res.render('promo.ogg');
 });
 
-app.get('/promo.html', function(req, res) {
-  res.render('promo.html');
-});
 
 
 function emailUpdater(){
